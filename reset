@@ -8,13 +8,13 @@ iptables -t mangle -F
 iptables -t mangle -X
 iptables -P INPUT ACCEPT
 iptables -P OUTPUT ACCEPT
-iptables -P FORWARE ACCEPT
+iptables -P FORWARD ACCEPT
 iptables -L
 
-echo "reset iptables" 
+echo "reset iptables"
 
 cp /root/sshd_config /etc/ssh/sshd_config
-service ssh start
+service ssh restart
 
 echo "restarted ssh"
 
@@ -23,3 +23,4 @@ rm -rf /home/deploy/src
 echo "removed old code"
 echo "reset root pass"
 passwd
+
