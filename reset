@@ -13,7 +13,7 @@ iptables -L
 
 echo "reset iptables"
 
-cp /root/sshd_config /etc/ssh/sshd_config
+cp /root/vmReset/sshd_config /etc/ssh/sshd_config
 service ssh restart
 
 echo "restarted ssh"
